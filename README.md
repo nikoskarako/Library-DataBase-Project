@@ -8,6 +8,8 @@ Project for the Databases 2023 class in NTUA ECE that simulates a Database about
 
 ```bash
 git clone https://github.com/nikoskarako/Library-Database-Project
+```
+
 
 
 *2.* ...........
