@@ -4,20 +4,18 @@ Project for the Databases 2023 class in NTUA ECE that simulates a Database about
 *Team: Nikolaos Karakostas, Michail Dimitropoulos, Vassileios Delis.*
 
 ## Requirments-Specifications:
-*1.* To clone this repository, use the following command:
-
+- To clone this repository, use the following command:
 ```bash
 git clone https://github.com/nikoskarako/Library-Database-Project
 ```
+in a local working directory.
 
+- Create the database in a DBMS that supports MySQL/MariaDB and run the scripts 
+```library_schema.sql```
+and
+```library_insert_data.sql```
 
-
-*2.* ...........
-
-*3.* ..........
-
-*4.* ..........
-
+- Visit ```http://localhost:8889/login.php``` from your web browser.
 
 
 ## ScreenShots from our webpages:
