@@ -2,7 +2,7 @@
 Project for the Databases 2023 class in NTUA ECE that simulates a Database about a Web Library of some schools. Users are able to find books, borrow, reserve and rate them.
 
 
-ScreenShots from our webpages.
+ScreenShots from our webpages:
 <img width="1259" alt="Screenshot 2023-06-03 at 5 13 06 PM" src="https://github.com/nikoskarako/Library-DataBase-Project/assets/133955672/2f88bd12-f06c-4a37-9d2f-db508c5cc6f3">
 
 
