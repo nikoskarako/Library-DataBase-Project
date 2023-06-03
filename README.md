@@ -10,7 +10,7 @@ Project for the Databases 2023 class in NTUA ECE that simulates a Database about
 **Download sql packages with homebrew:**
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install mysql
+brew install mysql 
 ```
 - Open a terminal and login as the root user. This can be done by the following command: 
 ```bash 
