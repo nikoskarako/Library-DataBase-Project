@@ -4,6 +4,33 @@ Project for the Databases 2023 class in NTUA ECE that simulates a Database about
 *Team: Nikolaos Karakostas, Michail Dimitropoulos, Vassileios Delis.*
 
 ## Requirments-Specifications:
+
+## Database Installation-Configuration project
+### Prerequisite installation steps for macOS
+**Download sql packages with homebrew:**
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install mysql
+```
+- Open a terminal and login as the root user. This can be done by the following command: 
+```bash 
+sudo mysql -u root -p;
+```
+-Create a new MySQL user with thee following credentials as shown in the command
+```bash 
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
+```
+
+-Grant privileges to the user on the database using
+```bash 
+GRANT ALL PRIVILEGES ON library to 'root'@'localhost' WITH GRANT OPTION;
+```
+
+-To check if the privileges are set correctly you can see the grant table with this command:
+```bash 
+FLUSH PRIVILEGES;
+```
+
 - To clone this repository, use the following command:
 ```bash
 git clone https://github.com/nikoskarako/Library-Database-Project
@@ -26,6 +53,7 @@ and
 
 
 <img width="1259" alt="Screenshot 2023-06-03 at 5 15 26 PM" src="https://github.com/nikoskarako/Library-DataBase-Project/assets/133955672/e8790275-3a70-48b6-b6f9-024ea3bc3bce">
+
 
 
 # Disclaimer:
