@@ -1,2 +1,2 @@
 - php version 8.2.0
-- A local Apache server running MySQL on port 8889
+- A local server running MySQL on port 8889
