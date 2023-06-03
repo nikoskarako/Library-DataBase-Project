@@ -28,7 +28,8 @@ and
 <img width="1259" alt="Screenshot 2023-06-03 at 5 15 26 PM" src="https://github.com/nikoskarako/Library-DataBase-Project/assets/133955672/e8790275-3a70-48b6-b6f9-024ea3bc3bce">
 
 
-
+# Disclaimer:
+All data was randomly generated and any correlation to real world names, phone numbers, etc. is purely coincidental.
 
 
 
