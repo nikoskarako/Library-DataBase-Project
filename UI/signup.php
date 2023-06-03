@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      background-image: url('24manguel-superJumbo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      max-width: 600px;
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="date"] {
+      width: 100%;
+      max-width: 300px; /* Adjust the max-width value to control the input field width */
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="user_signup.php" method="post">
+          <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+          </div>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div class="form-group">
+            <label for="school_number">School Number:</label>
+            <select id="school_number" name="school_number" required>
+              <?php
+              // Assuming you have established a database connection already
+              // Replace DB_HOST, DB_USERNAME, DB_PASSWORD, and DB_NAME with your actual database credentials
+              $db_host = 'localhost';
+              $db_user = 'root';
+              $db_password = 'root';
+              $db_name = 'library';
+              $db_port = 8889;
+
+              try {
+                  $dsn = "mysql:host=$db_host;dbname=$db_name;port=$db_port";
+                  $conn = new PDO($dsn, $db_user, $db_password);
+                  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                  // Fetch all the school numbers from the database
+                  $query = "SELECT DISTINCT school_id FROM school";
+                  $stmt = $conn->query($query);
+                  $schoolNumbers = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
+                  // Create options for each school number
+                  foreach ($schoolNumbers as $schoolNumber) {
+                      echo "<option value='$schoolNumber'>$schoolNumber</option>";
+                  }
+
+                  // Close the database connection
+                  $conn = null;
+              } catch (PDOException $e) {
+                  echo 'Connection failed: ' . $e->getMessage();
+              }
+              ?>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+        <div class="login-link">
+          Already have an account? <a href="login.php">Back to Login</a>
+        </div>
+      </div>
+    </body>
+    </html>
