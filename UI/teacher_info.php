@@ -166,13 +166,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="top-bar">
-        <a href="teacher_hompage.php">Home Page</a>
-        <a href="CommunicationInfo.php">Communication Info</a>
-        <a href="myaccount.php">My Account</a>
-        <a href="search.php">Search</a>
-        <a href="borrowing.php">Borrow</a>
-        <a href="reservation.php">Make a Reservation</a>
-        <a href="review.php">Review</a>
+        <a href="teacher_homepage.php">Home Page</a>
+        <a href="teacher_CommunicationInfo.php">Communication Info</a>
+        <a href="teacher_myaccount.php">My Account</a>
+        <a href="teacher_search.php">Search</a>
+        <a href="teacher_borrowing.php">Borrow</a>
+        <a href="teacher_reservation.php">Make a Reservation</a>
+        <a href="teacher_review.php">Review</a>
         <a href="teacher_info.php">My Info</a>
     </div>
 
