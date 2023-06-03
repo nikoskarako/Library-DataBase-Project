@@ -4,7 +4,11 @@ Project for the Databases 2023 class in NTUA ECE that simulates a Database about
 *Team: Nikolaos Karakostas, Michail Dimitropoulos, Vassileios Delis.*
 
 ## Requirments-Specifications:
-*1.* Clone this repository using the command git clone https://github.com/nikoskarako/Library-Database-Project in a local working directory
+*1.* To clone this repository, use the following command:
+
+```bash
+git clone https://github.com/nikoskarako/Library-Database-Project
+
 
 *2.* ...........
 
